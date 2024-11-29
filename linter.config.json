@@ -2,20 +2,20 @@
     "rules": {
         "noVar": true,
         "noUnusedVars": true,
-        "noConsoleLog": true,
+        "noConsoleLog": false,
         "constantCaps": true,
         "enforceSemicolon": false,
-        "consistentIndentation": true,
+        "consistentIndentation": 4,
         "noTrailingWhitespace": true,
-        "preferConst": true,
+        "preferConst": false,
         "noEmptyBlocks": true,
         "useTripleEquals": true,
-        "noMagicNumbers": true,
-        "consistentReturn": true,
-        "noParamReassign": true,
-        "noUnreachableCode": true,
+        "noMagicNumbers": false,
+        "consistentReturn": false,
+        "noParamReassign": false,
+        "noUnreachableCode": false,
         "fileNamingConvention": true,
-        "maxLinesPerFunction": [25, false]
+        "maxLinesPerFunction": 25
     },
     "options": {
         "externalTerminal": false

@@ -4,7 +4,7 @@
   "description": "A package to follow consistency in your code writing.",
   "main": "bin/cli.js",
   "bin": {
-    "ctm-jslinter": "bin/cli.js"
+    "ctm-jslinter": "./bin/cli.js"
   },
   "directories": {
     "lib": "lib"
