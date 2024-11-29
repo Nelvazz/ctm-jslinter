@@ -41,13 +41,13 @@ ctm-jslinter ./src/index.js
 ctm-jslinter ./src/
 ```
 
-## **5. Default Rules**
+### **4. Default Rules**
 
 ctm-jslinter comes with a set of preconfigured rules:
 
-- Enforce semicolons at the end of statements.
 - Disallow unused variables.
 - Enforce consistent spacing and indentation.
+- Enforce consistent naming convention.
 
 ## **Configuration**
 You can customize which folders will be ignored by the module by adding a `ctm-config.json` to your project:
