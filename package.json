@@ -1,0 +1,39 @@
+{
+  "name": "ctm-jslinter",
+  "version": "1.0.0",
+  "description": "A package to follow consistency in your code writing.",
+  "main": "bin/cli.js",
+  "bin": {
+    "ctm-jslinter": "bin/cli.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nelvazz/ctm-jslinter.git"
+  },
+  "keywords": [
+    "syntax",
+    "linter",
+    "javascript",
+    "node",
+    "nodejs",
+    "js",
+    "custom"
+  ],
+  "author": "nelvazz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nelvazz/ctm-jslinter/issues"
+  },
+  "homepage": "https://github.com/Nelvazz/ctm-jslinter#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "eslint-scope": "^8.2.0",
+    "espree": "^10.3.0"
+  }
+}
