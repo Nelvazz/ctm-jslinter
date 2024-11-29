@@ -1,0 +1,7 @@
+{
+    "rules": {
+      "noVar": true,
+      "noConsoleLog": true,
+      "constantCaps": true
+    }
+}
