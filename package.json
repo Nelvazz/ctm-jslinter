@@ -1,6 +1,6 @@
 {
   "name": "ctm-jslinter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A package to follow consistency in your code writing.",
   "main": "bin/cli.js",
   "bin": {
