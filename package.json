@@ -1,6 +1,6 @@
 {
   "name": "ctm-jslinter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package to follow consistency in your code writing.",
   "main": "bin/cli.js",
   "bin": {
@@ -10,7 +10,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ctm-jslinter": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
