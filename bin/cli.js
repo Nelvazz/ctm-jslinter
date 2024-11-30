@@ -9,7 +9,7 @@ console.log(PATH.resolve("./linter.config.json"))
 const CONFIG = FS.existsSync(PATH.resolve("./linter.config.json")) ? require(PATH.resolve("./linter.config.json")) : require("../linter.config.json");
 const [,, PARAMETER] = process.argv;
 
-FS.existsSync(PATH.resolve("./linter.config")) ? console.log(`- Using custom linting configuration.`.gray) : console.log(`- Using default linting configuration.`.gray);
+FS.existsSync(PATH.resolve("./linter.config.json")) ? console.log(`- Using custom linting configuration.`.gray) : console.log(`- Using default linting configuration.`.gray);
 if (!PARAMETER) {
     console.error("Error: No file specified.".red);
     process.exit(1);
