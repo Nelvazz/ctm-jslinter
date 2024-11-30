@@ -1,6 +1,9 @@
 # **ctm-jslinter**
 A powerful and customizable JavaScript linter that runs on Node.js startup or via a terminal command. Define your own rules and ensure code consistency across your projects.
 
+## **This is not finished !**
+This module encounter some problems during installation for the moment.
+
 ## **Features**
 - Automatically checks files for linting issues when a Node.js process starts.
 - Run manually with a terminal command for specific files or folders.
