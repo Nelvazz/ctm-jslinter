@@ -58,18 +58,12 @@ You can customize which folders will be ignored by the module by adding a `ctm-c
     "rules": {
         "noVar": true,
         "noUnusedVars": true,
-        "noConsoleLog": false,
+        "noConsoleLog": true,
         "constantCaps": true,
-        "enforceSemicolon": false,
         "consistentIndentation": 4,
         "noTrailingWhitespace": true,
-        "preferConst": false,
         "noEmptyBlocks": true,
         "useTripleEquals": true,
-        "noMagicNumbers": false,
-        "consistentReturn": false,
-        "noParamReassign": false,
-        "noUnreachableCode": false,
         "fileNamingConvention": true,
         "maxLinesPerFunction": 25
     },
@@ -83,8 +77,4 @@ You can customize which folders will be ignored by the module by adding a `ctm-c
 - **`ignore`**: Array of folders or files to exclude from linting.
 
 ## Contributing
-<<<<<<< HEAD
 If you'd like to contribute to this module, feel free to submit a pull request or open an issue to discuss improvements.
-=======
-If you'd like to contribute to this module, feel free to submit a pull request or open an issue to discuss improvements.
->>>>>>> 38ed3308348b18523e5983cf88aed8b3ccc0106a
