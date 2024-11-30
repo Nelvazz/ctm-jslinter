@@ -5,7 +5,8 @@ const PATH = require("path");
 require("colors");
 const { lint } = require("../lib/linter");
 const RULES = require("../lib/rules");
-const CONFIG = FS.existsSync(PATH.resolve("./linter.config")) ? require(PATH.resolve("./linter.config")) : require("../linter.config.json");
+console.log(PATH.resolve("./linter.config.json"))
+const CONFIG = FS.existsSync(PATH.resolve("./linter.config.json")) ? require(PATH.resolve("./linter.config.json")) : require("../linter.config.json");
 const [,, PARAMETER] = process.argv;
 
 FS.existsSync(PATH.resolve("./linter.config")) ? console.log(`- Using custom linting configuration.`.gray) : console.log(`- Using default linting configuration.`.gray);
