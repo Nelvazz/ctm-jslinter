@@ -1,10 +1,9 @@
 # **ctm-jslinter**
-A powerful and customizable JavaScript linter that runs on Node.js startup or via a terminal command. Define your own rules and ensure code consistency across your projects.
+A customizable JavaScript linter that runs on Node.js startup or via a terminal command. Define your own rules and ensure code consistency across your projects.
 
 ## **Features**
 - Automatically checks files for linting issues when a Node.js process starts.
 - Run manually with a terminal command for specific files or folders.
-- Fully customizable rules.
 - Lightweight and fast.
 
 ## **Installation**
@@ -20,7 +19,7 @@ CTM-Check will automatically lint files when your Node.js process starts.
 To enable, add the following to your `package.json`:
 ```json
 "scripts": {
-  "start": "node -r ctm-**jslinter** your-app.js"
+  "start": "node -r ctm-jslinter your-app.js"
 }
 ```
 
@@ -42,7 +41,6 @@ ctm-jslinter ./src/
 ```
 
 ### **4. Default Rules**
-
 ctm-jslinter comes with a set of preconfigured rules:
 
 - Disallow unused variables.
@@ -50,7 +48,7 @@ ctm-jslinter comes with a set of preconfigured rules:
 - Enforce consistent naming convention.
 
 ## **Configuration**
-You can customize which folders will be ignored by the module by adding a `ctm-config.json` to your project:
+You can customize which rules and folders will be ignored by the module by adding a `linter.config.json` to your project:
 
 ### **Example Configuration**
 ```json
@@ -68,7 +66,7 @@ You can customize which folders will be ignored by the module by adding a `ctm-c
         "maxLinesPerFunction": 25
     },
     "options": {},
-    "ignore": ["node_modules"]
+    "ignore": ["node_modules", "dist"]
 }
 ```
 
