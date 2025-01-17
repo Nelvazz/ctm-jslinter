@@ -21,6 +21,34 @@ switch (PARAMETER) {
         const FILES = getAllFiles(process.cwd());
         FILES.forEach(lintFile);
         break;
+    case '-i':
+    case '-init':
+        // Create default linting file inside project
+        FS.writeFileSync("./linter.config.json", `{
+    "rules": {
+        "noVar": true,
+        "noUnusedVars": true,
+        "noConsoleLog": true,
+        "constantCaps": true,
+        "enforceSemicolon": false,
+        "consistentIndentation": 4,
+        "noTrailingWhitespace": true,
+        "preferConst": true,
+        "noEmptyBlocks": true,
+        "useTripleEquals": true,
+        "noMagicNumbers": false,
+        "consistentReturn": false,
+        "noParamReassign": false,
+        "noUnreachableCode": false,
+        "fileNamingConvention": true,
+        "maxLinesPerFunction": 25
+    },
+    "options": {
+        "externalTerminal": false
+    },
+    "ignore": ["node_modules"]
+}`)
+        break;
     default:
         const TARGET = PATH.resolve(PARAMETER);
         if (!FS.existsSync(TARGET)) {
@@ -33,7 +61,8 @@ switch (PARAMETER) {
             const FILES = getAllFiles(TARGET);
             FILES.forEach(lintFile);
         } else {
-            lintFile(TARGET);
+            if (!TARGET.endsWith(".js")) console.error("Error : Specified file is not a JavaScript file.".red)
+            else lintFile(TARGET);
         }
         break;
 }
