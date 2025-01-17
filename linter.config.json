@@ -1,24 +1,16 @@
 {
     "rules": {
         "noVar": true,
-        "noUnusedVars": true,
         "noConsoleLog": false,
         "constantCaps": true,
         "enforceSemicolon": false,
         "consistentIndentation": 4,
         "noTrailingWhitespace": true,
-        "preferConst": false,
+        "preferConst": true,
         "noEmptyBlocks": true,
         "useTripleEquals": true,
-        "noMagicNumbers": false,
-        "consistentReturn": false,
-        "noParamReassign": false,
-        "noUnreachableCode": false,
         "fileNamingConvention": true,
-        "maxLinesPerFunction": 25
-    },
-    "options": {
-        "externalTerminal": false
+        "maxLinesPerFunction": false
     },
     "ignore": ["node_modules"]
 }
