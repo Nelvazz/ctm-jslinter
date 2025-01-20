@@ -9,6 +9,7 @@
         "preferConst": true,
         "noEmptyBlocks": true,
         "useTripleEquals": true,
+        "spaceBetweenOperators": true,
         "fileNamingConvention": true,
         "maxLinesPerFunction": false
     },
