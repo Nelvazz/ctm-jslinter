@@ -3,7 +3,7 @@
         "noVar": true,
         "noConsoleLog": false,
         "constantCaps": true,
-        "enforceSemicolon": false,
+        "enforceSemicolon": true,
         "consistentIndentation": 4,
         "noTrailingWhitespace": true,
         "preferConst": true,
@@ -11,7 +11,7 @@
         "useTripleEquals": true,
         "spaceBetweenOperators": true,
         "fileNamingConvention": true,
-        "maxLinesPerFunction": false
+        "maxLinesPerFunction": 25
     },
     "ignore": ["node_modules"]
 }
