@@ -5,7 +5,6 @@ const PATH = require("path");
 require("colors");
 const { lint } = require("../lib/linter");
 const RULES = require("../lib/rules");
-console.log(PATH.resolve("./linter.config.json"))
 const CONFIG = FS.existsSync(PATH.resolve("./linter.config.json")) ? require(PATH.resolve("./linter.config.json")) : require("../linter.config.json");
 const [,, PARAMETER] = process.argv;
 
@@ -27,19 +26,15 @@ switch (PARAMETER) {
         FS.writeFileSync("./linter.config.json", `{
     "rules": {
         "noVar": true,
-        "noUnusedVars": true,
-        "noConsoleLog": true,
+        "noConsoleLog": false,
         "constantCaps": true,
-        "enforceSemicolon": false,
+        "enforceSemicolon": true,
         "consistentIndentation": 4,
         "noTrailingWhitespace": true,
         "preferConst": true,
         "noEmptyBlocks": true,
         "useTripleEquals": true,
-        "noMagicNumbers": false,
-        "consistentReturn": false,
-        "noParamReassign": false,
-        "noUnreachableCode": false,
+        "spaceBetweenOperators": true,
         "fileNamingConvention": true,
         "maxLinesPerFunction": 25
     },
@@ -92,9 +87,9 @@ function lintFile(file) {
     }, RULES, CONFIG);
 
     if (RESULTS.length === 0) {
-        console.log(`-`.gray+` ${file.replace(process.cwd(), '')} : ✅ No issues found!`.green);
+        console.log(`-`.gray + ` ${file.replace(process.cwd(), '')} : ✅ No issues found!`.green);
     } else {
-        console.log(`┌`.gray+` ${file.replace(process.cwd(), '')} : ❌ Issues detected`.red);
+        console.log(`┌`.gray + ` ${file.replace(process.cwd(), '')} : ❌ Issues detected`.red);
         RESULTS.forEach((issue, idx) =>
             console.log(`${RESULTS.length !== idx + 1 ? "├" : "└"}`.gray+` ${idx + 1}. ${issue.message}`.yellow)
         );
